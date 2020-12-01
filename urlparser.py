@@ -1,9 +1,5 @@
 def parseURL(url):
-    # url='https://www.facebook.com/photo.php?fbid=2068026323275211&set=a.269104153167446&type=3&theater'   #Sample URLS
-    # url='http://www.blog.google.uk:1000/path/to/myfile.html?key1=value1&key2=value2#InTheDocument'      
-    # url='https://www.overleaf.com/9565720ckjijuhzpbccsd#/347876331/'                                    
-
-
+                                   
     seg2 = url.split('/')[2]    # Separating domain name
     seg1 = url.split(seg2)[-2]  # Deriving protocol
     print('Protocol:', seg1, '\n')
@@ -67,3 +63,8 @@ def parseURL(url):
 if __name__ == '__main__':
     url = input("Enter your URL: ")
     parseURL(url)
+    
+    #Sample URLS to copy
+    # url='https://www.facebook.com/photo.php?fbid=2068026323275211&set=a.269104153167446&type=3&theater'   
+    # url='http://www.blog.google.uk:1000/path/to/myfile.html?key1=value1&key2=value2#InTheDocument'      
+    # url='https://www.overleaf.com/9565720ckjijuhzpbccsd#/347876331/' 
