@@ -1,16 +1,14 @@
 def parseURL(url):
-    # url='https://www.facebook.com/photo.php?fbid=2068026323275211&set=a.269104153167446&type=3&theater'   #URL One
-    # url='ftp://root@west.uni.koblenz.de'                                                                #URL Two
-    # url='http://www.blog.google.uk:1000/path/to/myfile.html?key1=value1&key2=value2#InTheDocument'      #URL Three
-    # url='https://west.uni-koblenz.de/studying/ws2021'                                                   #URL Four
-    # url='https://www.overleaf.com/9565720ckjijuhzpbccsd#/347876331/'                                    #URL Five
+    # url='https://www.facebook.com/photo.php?fbid=2068026323275211&set=a.269104153167446&type=3&theater'   #Sample URLS
+    # url='http://www.blog.google.uk:1000/path/to/myfile.html?key1=value1&key2=value2#InTheDocument'      
+    # url='https://www.overleaf.com/9565720ckjijuhzpbccsd#/347876331/'                                    
 
 
-    seg2 = url.split('/')[2]  # Separating domain name
+    seg2 = url.split('/')[2]    # Separating domain name
     seg1 = url.split(seg2)[-2]  # Deriving protocol
     print('Protocol:', seg1, '\n')
     print('Domain name:', seg2, '\n')
-    seg3 = url.split(seg2)[1]  # Getting the path; if output is empty,the there is no path in URL
+    seg3 = url.split(seg2)[1]   #Getting the path; if output is empty,the there is no path in URL
     print('Path:', seg3, '\n')
 
     if '#' in url:  # Extracting fragment id, else None
@@ -18,12 +16,12 @@ def parseURL(url):
         print('Fragment ID:', seg4, '\n')
     else:
         seg4 = 'None'
-    if '@' in url:  # Extracting user name, else None
+    if '@' in url:              # Extracting user name, else None
         seg5 = url.split('/')[-1]
         print('Scheme with User Name:', seg5, '\n')
     else:
         seg5 = 'None'
-    if '?' in url:  # Extracting query string, else None
+    if '?' in url:              # Extracting query string, else None
         seg6 = url.split('?')[-1]
         print('Query string:', seg6, '\n')
     else:
@@ -36,7 +34,7 @@ def parseURL(url):
     print(dictionary, '\n')
 
     print('The TLD in the given URL is following: ')
-    if '.com' in url:  # Extracting most famous TLDs maintained by ICAAN
+    if '.com' in url:           # Extracting most famous TLDs maintained by ICAAN
         print('.com\n')
     elif '.de' in url:
         print('.de\n')
