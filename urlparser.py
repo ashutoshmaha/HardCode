@@ -27,8 +27,8 @@ def parseURL(url):
     else:
         seg6 = 'None'
 
-    print(
-        '**The dictionary is in the sequence: 0.URL 1.Protocol 2.Domain name 3.Path 4.Fragment id 5.User name 6.Query string** \n')
+    print('**The dictionary is in the sequence: 0.URL 1.Protocol 2.Domain name 3.Path 4.Fragment id 5.User name 6.Query string** \n')
+    
     dictionary = {'0.URL': url, '1.Protocol': seg1, '2.Domain name': seg2, '3.Path': seg3, '4.Fragment id': seg4,
                   '5.User name': seg5, '6.Query string': seg6}  # Printing required dictionary
     print(dictionary, '\n')
