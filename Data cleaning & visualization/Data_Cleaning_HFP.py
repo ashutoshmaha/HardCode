@@ -140,4 +140,3 @@ ax.set_ylabel('Ejection_Fraction (mg/dL)')
 ax.set_title('scatter plot')
 plt.grid(True)
 plt.show()
-
